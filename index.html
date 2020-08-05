@@ -82,6 +82,7 @@
 
     <div style="background:#fafafa;border-top:1px solid #eee;padding:15px;font-size:.9em">
           <p style="text-align: center;">
+            <a href="">Restartează puzzle.</a>
             Pentru mai multe aplicații educaționale te așteptăm aici: <a href="https://pentrucer.net">Pentru Cer</a>
           </p>
     </div>
@@ -96,16 +97,22 @@
         !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 
         function start_puzzle(x){
-            /*
-              TODO:
-              Putem aveam mai multe imagini in folder.
-              Le numim image1.jpg, image2.jpg, image3.jpg etc.
-              Inainte sa inceapa puzzle, chiar aici unde e commentul
-              putem genera la intamplare un numar intre 1 si numarul total
-              de poze. Schimbam cu jQuery imaginea #source_image.
-              In felul asta la fiecare refresh de pagina putem avea imagine
-              noua. Yee!
-            */
+            // Having a list of images select a random one.
+            var list_of_images = [
+              "image.jpg",
+              "image_2.jpg",
+              "image_3.jpg",
+              "image_4.jpg"
+            ];
+
+            var selected_image = list_of_images[
+              Math.floor(Math.random() * list_of_images.length)
+            ];
+
+            // Update the image with selected one.
+            $("#source_image").attr("src", selected_image);
+
+            // Start puzzle then...
             $('#puzzle_solved').hide();
             $('#source_image').snapPuzzle({
                 rows: x, columns: x,
