@@ -1,13 +1,22 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Puzzle</title>
-    <meta name="description" content="Puzzle cu imagini.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
     <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/grids-responsive-min.css">
     <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Puzzle cu versete - Pentru Cer</title>
+    <meta name="description" content="Învață versete biblice rezolvând puzzle.">
     <style>
         body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
         html, button, input, select, textarea, .pure-g [class *= "pure-u"] { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.02em; }
@@ -53,41 +62,64 @@
         .snappuzzle-slot { position: absolute; background: #fff; opacity: .8; }
         .snappuzzle-slot-hover { background: #eee; }
     </style>
-</head>
-<body>
-    <div style="max-width:900px;padding:0 10px;margin:40px auto;text-align:center">
-        <h1>Puzzle</h1>
-        <h2>Mută piesele pentru a construi imaginea.</h2>
-    </div>
-    <div id="puzzle-containment" style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:10px;text-align:center">
-        <div class="pure-g" style="max-width:1280px;margin:auto">
-            <div class="pure-u-1 pure-u-md-1-2"><div style="margin:10px">
-                <img id="source_image" class="pure-img" src="image.jpg">
-            </div></div>
-            <div class="pure-u-1 pure-u-md-1-2">
-                <div id="pile" style="margin:10px">
-                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
-                        <h2 style="margin:0 0 20px">Bravo!</h2>
-                        <a class="pure-button button-lg restart-puzzle" data-grid="3">Vrei din nou?</a>
-                        <br><br>
-                        <a href="#" class="restart-puzzle" data-grid="5">5x5</a>
-                        &nbsp; <a href="#" class="restart-puzzle" data-grid="7">7x7</a>
-                        &nbsp; <a href="#" class="restart-puzzle" data-grid="10">10x10</a>
-                    </div>
-                </div>
-            </div>
+  </head>
+
+  <body>
+    <section class="application">
+      <div class="container app-container">
+        <div class="row">
+          <div class="col">
+            <h1 class="app-title">
+              <i class="fas fa-car"></i>
+              Puzzle cu versete
+            </h1>
+          </div>
         </div>
-    </div>
+        <!-- Content here -->
+        <div class="row">
+          <div class="col">
+            <div id="puzzle-containment" style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:10px;text-align:center">
+              <div class="pure-g" style="max-width:1280px;margin:auto">
+                <div class="pure-u-1 pure-u-md-1-2">
+                  <div style="margin:10px">
+                    <img id="source_image" class="pure-img" src="image.jpg">
+                  </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                  <div id="pile" style="margin:10px">
+                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
+                      <h2 style="margin:0 0 20px">Bravo!</h2>
+                      <a class="pure-button button-lg restart-puzzle" data-grid="3">Vrei din nou?</a>
+                      <br><br>
+                      <a href="#" class="restart-puzzle" data-grid="5">5x5</a>
+                      &nbsp; <a href="#" class="restart-puzzle" data-grid="7">7x7</a>
+                      &nbsp; <a href="#" class="restart-puzzle" data-grid="10">10x10</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="footer container">
+      <div class="info">
+        <p class="text-center">Some text here and <a href="#">a link</a>. Please click.</p>
+      </div>
+      <div class="logo">
+        <a href="https://www.pentrucer.net">
+          <img src="images/logo-pentru-cer.png" alt="Pentru Cer" />
+        </a>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <div style="background:#fafafa;border-top:1px solid #eee;padding:15px;font-size:.9em">
-          <p style="text-align: center;">
-            <a href="">Restartează puzzle.</a>
-            Pentru mai multe aplicații educaționale te așteptăm aici: <a href="https://pentrucer.net">Pentru Cer</a>
-          </p>
-    </div>
-
-    <div id="fb-root"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="jquery.snap-puzzle.js"></script>
@@ -140,5 +172,5 @@
             });
         });
     </script>
-</body>
+  </body>
 </html>
