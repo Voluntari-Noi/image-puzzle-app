@@ -30,3 +30,7 @@ section.footer div.logo img {
   width: 150px;
   height: auto;
 }
+
+div.app-container {
+  margin-top: 10px;
+}
