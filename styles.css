@@ -34,3 +34,22 @@ section.footer div.logo img {
 div.app-container {
   margin-top: 10px;
 }
+
+.test-text {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 0.5em 10px;
+  border-radius: 10px;
+  font-size: 14pt;
+  margin-bottom: 20px;
+}
+
+div.test-text p {
+  margin-bottom: 0px;
+}
+
+.snappuzzle-wrap { position: relative; display: block; }
+.snappuzzle-pile { position: relative; }
+.snappuzzle-piece { cursor: move; }
+.snappuzzle-slot { position: absolute; background: #fff; opacity: .8; }
+.snappuzzle-slot-hover { background: #eee; }
