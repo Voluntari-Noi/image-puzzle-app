@@ -22,6 +22,11 @@
                     puzzle_offset = that.closest('span').offset(),
                     pile_offset = pile.offset();
 
+                    // TODO ?? wrong dims on windows resize
+                    console.log("SET DIMS");
+                    console.log(maxX);
+                    console.log(maxY);
+
                 if (options == 'destroy') {
                     $('.'+o.puzzle_class).remove();
                     that.unwrap().removeData('options');
