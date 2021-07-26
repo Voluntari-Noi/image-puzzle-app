@@ -5,9 +5,9 @@
 function start_puzzle(x) {
   // Having a list of images select a random one.
   var list_of_images = [
-    "images/01.png",
-    "images/02.png",
-    "images/03.png"
+    "images/01_small.png",
+    "images/02_small.png",
+    "images/03_small.png"
   ];
 
   var selected_image = list_of_images[
