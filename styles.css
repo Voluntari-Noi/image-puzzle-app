@@ -11,7 +11,7 @@
 body {
   color: #151515;
   background: #6c9a8b;
-  /* TODO background-image: url('images/bg-paper-blue.png'); */
+  background-image: url('images/bg-burried-blue.png');
 }
 
 div.container {
@@ -27,8 +27,9 @@ div.row.row-header {
   background: #e8998d;
   color: #fbf7f4;
   text-align: center;
-  /* TODO background: rgb(29,69,67); */
-  /* background: linear-gradient(90deg, rgba(29,69,67,1) 0%, rgba(37,89,87,1) 35%, rgba(76,159,156,1) 100%); */
+
+  background: rgb(241,138,122);
+  background: linear-gradient(90deg, rgba(241,138,122,1) 0%, rgba(232,153,141,1) 35%, rgba(224,177,137,1) 100%);
 }
 
 div.row.row-header h3 {
@@ -68,13 +69,18 @@ div.row.row-header img.logo {
   margin-right: 10px;
 }
 
+.fas.fa-puzzle-piece {
+  opacity: 0.5;
+}
+
 div.row.row-board {
   background: #fbf7f4;
 }
 
 div.row.row-footer {
-  background: #a1683a;
   color: #fbf7f4;
+  background: rgb(196,135,86);
+  background: linear-gradient(90deg, rgba(196,135,86,1) 0%, rgba(161,104,58,1) 35%, rgba(224,167,96,1) 100%);
 }
 
 div.row.row-footer a {
