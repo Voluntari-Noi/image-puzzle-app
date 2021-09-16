@@ -7,7 +7,23 @@ function start_puzzle(x) {
   var list_of_images = [
     "images/01_small.png",
     "images/02_small.png",
-    "images/03_small.png"
+    "images/03_small.png",
+    "images/04_small.png",
+    "images/05_small.png",
+    "images/06_small.png",
+    "images/07_small.png",
+    "images/08_small.png",
+    "images/09_small.png",
+    "images/10_small.png",
+    "images/11_small.png",
+    "images/12_small.png",
+    "images/13_small.png",
+    "images/14_small.png",
+    "images/15_small.png",
+    "images/16_small.png",
+    "images/17_small.png",
+    "images/18_small.png",
+    "images/19_small.png"
   ];
 
   var selected_image = list_of_images[
